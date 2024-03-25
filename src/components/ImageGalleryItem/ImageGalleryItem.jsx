@@ -15,7 +15,7 @@ export class ImageGalleryItem extends Component{
         return null; 
       }
      
-     console.log(results);
+     //console.log(results);
       
       return results.map(result => (
         <li key={result.id} className={css.item}>
