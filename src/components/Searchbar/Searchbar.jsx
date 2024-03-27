@@ -16,10 +16,6 @@ render() {
         return (
           <header className={css.searchBar}>
             <form className={css.form} onSubmit={onCompletion}>
-              <button type="submit" className={css.button}>
-                <span className={css.buttonLabel}>Search</span>
-              </button>
-
               <input
                 className={css.input}
                 type="text"
@@ -27,6 +23,9 @@ render() {
                 autoFocus
                 placeholder="Search images and photos"
               />
+              <button type="submit" className={css.button}>
+                <span className={css.buttonLabel}>Search</span>
+              </button>
             </form>
           </header>
         );

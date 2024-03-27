@@ -1,16 +1,28 @@
 import React, { Component } from 'react';
-
+import css from './Modal.module.css';
+import svg from "./icons.svg";
 export class Modal extends Component{
 
 
-    render() {
-        
-        return (
-          <div class="overlay">
-            <div class="modal">
-              <img src="" alt="" />
+  render() {
+    const { imgSrc } = this.props;
+    const { altSrc } = this.props;
+    const { close } = this.props;
+    return (
+      <>
+        {imgSrc !== undefined && (
+          <div className={css.overlay}>
+            <button className={css.closeModal} onClick={close}>
+              <svg width="20px" height="20px" className={css.modalIcon}>
+                  <use href={`${svg}#icon-close`}></use>
+              </svg>
+            </button>
+            <div className={css.modal}>
+              <img className={css.modalImage} src={imgSrc} alt={altSrc} />
             </div>
           </div>
-        );
+        )}
+      </>
+    );
     }
 }

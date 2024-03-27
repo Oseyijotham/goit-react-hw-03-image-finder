@@ -9,6 +9,7 @@ export class ImageGalleryItem extends Component{
   render() {
 
     const { results } = this.props;
+    const { imageClick } = this.props;
     
 
       if (!results || results.length === 0) {
@@ -20,9 +21,11 @@ export class ImageGalleryItem extends Component{
       return results.map(result => (
         <li key={result.id} className={css.item}>
           <img
-            className={css.avatar}
+            className={css.image}
             src={result.webformatURL}
             alt={result.tags}
+            name={result.largeImageURL}
+            onClick={imageClick}
           />
         </li>
       ));

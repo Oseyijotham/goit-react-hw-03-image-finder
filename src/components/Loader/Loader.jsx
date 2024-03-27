@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Audio } from 'react-loader-spinner';
+import { ThreeCircles } from 'react-loader-spinner';
+import css from './Loader.module.css';
 
 export class Loader extends Component{
 
@@ -7,20 +8,23 @@ export class Loader extends Component{
     render() {
         const { isLoading } = this.props;
 
-
+    
         
         return (
           <>
             {isLoading && (
-              <Audio
-                height="80"
-                width="80"
-                radius="9"
-                color="green"
-                ariaLabel="loading"
-                wrapperStyle
-                wrapperClass
-              />
+              <div className={css.backDrop}>
+                <ThreeCircles
+                  visible={true}
+                  height="80"
+                  width="80"
+                  color="rgb(209, 209, 209)"
+                  radius="9"
+                  ariaLabel="three-dots-loading"
+                  wrapperStyle={{}}
+                  wrapperClass={css.loader}
+                />
+              </div>
             )}
           </>
         );

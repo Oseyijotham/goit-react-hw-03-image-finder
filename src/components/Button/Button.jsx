@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import css from './Button.module.css';
 
 export class Button extends Component{
 
@@ -15,7 +15,7 @@ export class Button extends Component{
         return (
           <div>
             {results.length !== 0 && ifUserSearched && !iflessResponse?
-                    (<button onClick={onPress}>Load More</button>)
+                    (<button onClick={onPress} className={css.loadBtn}>Load More</button>)
                     :
                 null
                 }

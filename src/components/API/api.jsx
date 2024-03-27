@@ -1,8 +1,6 @@
 import axios from 'axios';
 
 export const startSrch = async srchTerm => {
-  
-
   try {
     const response = await axios.get(`https://pixabay.com/api/`, {
       params: {

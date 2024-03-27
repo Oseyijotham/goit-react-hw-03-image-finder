@@ -19,7 +19,9 @@ export class ImageGallery extends Component{
         {gallery.length !== 0 ? (
           <ul className={css.gallery}>{children}</ul>
         ) : (
-          <p>No Pictures</p>
+          <div className={css.message}>
+            <p className={css.messageItem}>No Pictures</p>
+          </div>
         )}
       </>
     );
