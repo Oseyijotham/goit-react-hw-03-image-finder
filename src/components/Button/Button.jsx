@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import css from './Button.module.css';
+import PropTypes from 'prop-types';
 
 export class Button extends Component{
 
@@ -23,3 +24,10 @@ export class Button extends Component{
         );
     }
 }
+
+Button.propTypes = {
+  results: PropTypes.array.isRequired,
+  onPress: PropTypes.func.isRequired,
+  ifUserSearched: PropTypes.bool.isRequired,
+  iflessResponse: PropTypes.bool.isRequired,
+};

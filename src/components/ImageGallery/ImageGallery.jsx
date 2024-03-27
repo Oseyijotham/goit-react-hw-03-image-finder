@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import css from './ImageGallery.module.css';
-
+import PropTypes from 'prop-types';
 
 export class ImageGallery extends Component{
 
@@ -26,7 +26,9 @@ export class ImageGallery extends Component{
       </>
     );
     }
-
-
-
 }
+
+ImageGallery.propTypes = {
+  children: PropTypes.node.isRequired,
+  gallery: PropTypes.array.isRequired,
+};

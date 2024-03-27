@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import css from './ImageGalleryItem.module.css';
-
+import PropTypes from 'prop-types';
 
 
 export class ImageGalleryItem extends Component{
@@ -35,18 +35,7 @@ export class ImageGalleryItem extends Component{
     }
 }
 
-
-/*export const ImageGalleryItem = ({ results }) => (
-  <ul>
-    {results.length !== 0 ? (
-      results.map(({ id, webformatURL, tags }) => (
-      <li key={id}>
-        <img className={css.avatar} src={webformatURL} alt={tags} />
-      </li>
-      ))
-    )
-      :
-      <p>Empty Array</p>
-  }
-  </ul>
-);*/
+ImageGalleryItem.propTypes = {
+  results: PropTypes.array.isRequired,
+  imageClick: PropTypes.func.isRequired,
+};

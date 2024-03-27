@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import css from './Modal.module.css';
 import svg from "./icons.svg";
+import PropTypes from 'prop-types';
+
 export class Modal extends Component{
 
 
@@ -26,3 +28,9 @@ export class Modal extends Component{
     );
     }
 }
+
+Modal.propTypes = {
+  imgSrc: PropTypes.string.isRequired,
+  altSrc: PropTypes.string.isRequired,
+  close: PropTypes.func.isRequired,
+};
