@@ -80,7 +80,7 @@ export class App extends Component {
             'Sorry, there are no images matching your search query. Please try again.'
           );
         }
-        if (totalResponse < 12 && totalResponse !== 0) {
+        if (totalResponse <= 12 && totalResponse !== 0) {
           Notiflix.Notify.warning(
             "We're sorry, but you've reached the end of search results."
           );
@@ -121,7 +121,7 @@ export class App extends Component {
     const { resultsAmount } = this.state;
     let storageVar = pageItems;
     storageVar += 12;
-    if (storageVar > resultsAmount) {
+    if (storageVar >= resultsAmount) {
        Notiflix.Notify.warning(
          "We're sorry, but you've reached the end of search results."
        );
